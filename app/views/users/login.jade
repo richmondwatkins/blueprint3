@@ -1,0 +1,17 @@
+extends ../shared/template
+
+block content
+
+  h3 Login Page MuthaSucka
+
+  label Register
+  form(method='post', action='/users')
+    input(type='text', name='username')
+    input(type='text', name='password')
+    button Register
+
+  label Login
+  form(method='post', action='/login')
+    input(type='text', name='username')
+    input(type='text', name='password')
+    button Login

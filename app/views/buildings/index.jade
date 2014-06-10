@@ -1,0 +1,13 @@
+extends ../shared/template
+
+block content
+  h1= title
+
+  form(method='POST', action='/buildings')
+    input(type='text', name='name', placeholder='Enter Name')
+    input(type='number', name='x', placeholder='Enter Start X Value')
+    input(type='number', name='y', placeholder='Enter Start Y Value')
+    select
+      each location in locations
+        option(value=location._id})= location.name
+    button Create
